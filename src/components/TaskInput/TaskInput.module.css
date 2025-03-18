@@ -1,0 +1,38 @@
+.formTask {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+
+  height: 3.375rem;
+  margin-top: -2rem;
+}
+
+.formTask input {
+  border: 1px solid var(--gray-700);
+  border-radius: 0.5rem;
+  padding: 1rem;
+
+  width: 39.875rem;
+  color: var(--gray-100);
+
+  line-height: 140%;
+}
+
+.formTask button {
+  padding: 1rem;
+  border: none;
+  background-color: var(--blue-600);
+  color: var(--gray-100);
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  transition: background-color 0.1s;
+}
+
+.formTask button:hover {
+  background-color: var(--blue-500);
+}
