@@ -47,7 +47,7 @@ button {
     box-shadow: 0 0 0 2px var(--purple-600);
 }
 
-button:focus {
+button:focus, input[type='checkbox']:focus {
     box-shadow: none;
 }
 
