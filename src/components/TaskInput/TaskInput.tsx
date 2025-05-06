@@ -3,6 +3,8 @@ import styles from "./TaskInput.module.css";
 
 function handleCreateTask() {
   event?.preventDefault();
+
+  
 }
 
 export function TaskInput() {

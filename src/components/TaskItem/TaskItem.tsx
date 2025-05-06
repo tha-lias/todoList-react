@@ -11,17 +11,32 @@ export interface ITaskItem {
 export function TaskItem({ task, onDelete, onToggleComplete }: ITaskItem) {
   return (
     <div className={styles.task}>
-      <div className={styles.infoTask} onClick={() => onToggleComplete(task.id)}>
+      <div
+        className={styles.infoTask}
+        onClick={() => onToggleComplete(task.id)}
+      >
         <label htmlFor="checkbox">
           <input readOnly type="checkbox" />
-          <span className={`${styles.checkbox} ${task.completed ? styles['checkbox-checked'] : styles['checkbox-unchecked']}`} >
-            {task.completed && <Check size={12} color="white"/>}
+          <span
+            className={`${styles.checkbox} ${
+              task.completed
+                ? styles["checkbox-checked"]
+                : styles["checkbox-unchecked"]
+            }`}
+          >
+            {task.completed && <Check size={12} color="white" />}
           </span>
         </label>
-        <p>{task.description}</p>
+        <p
+          className={`${styles.paragraph} ${
+            task.completed && styles["paragraph-checked"]
+          }`}
+        >
+          {task.description}
+        </p>
       </div>
-      <button onClick={() => onDelete(task.id)}> 
-        <Trash size={18} color="#808080"/>
+      <button onClick={() => onDelete(task.id)}>
+        <Trash size={18} color="#808080" />
       </button>
     </div>
   );
