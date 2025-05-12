@@ -32,7 +32,7 @@ Toda a lógica, estrutura da aplicação e seus componentes foram implementadas 
 ## 🎯 Objetivos Alcançados
 
 - 💻 Desenvolvimento **completo** do desafio técnico proposto pela Rocketseat.
-- 🧠 Aplicação prática de conceitos fundamentais do ReactJS, como `useState`, manipulação de eventos e controle de estados.
+- 🧠 Aplicação prática de conceitos fundamentais do ReactJS, como `useState`, manipulação de eventos controle e imutabilidade de estados.
 - 🎨 Interface fiel ao layout original do [Figma](https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate), com atenção a detalhes de UI/UX.
 - 📱 Layout 100% responsivo e adaptado para diferentes resoluções de tela.
 - 📦 Organização e reutilização de estilos com **CSS Modules**.
