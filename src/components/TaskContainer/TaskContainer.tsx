@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { TaskItem } from "../TaskItem/TaskItem";
 import styles from "./TaskContainer.module.css";
 import { ClipboardText } from "@phosphor-icons/react";
@@ -9,33 +8,14 @@ export interface ITask {
   completed: boolean;
 }
 
-export function TaskContainer() {
-  const [tasks, setTasks] = useState<ITask[]>([
-    { id: 1, description: "Estudar React", completed: false },
-    { id: 2, description: "Estudar TypeScript", completed: true },
-    { id: 3, description: "Estudar Angular", completed: false },
-    // Add more tasks here...
-  ]);
+interface TaskContainerProps {
+  tasks: ITask[];
+  onDeleteTask: (id: number) => void;
+  onToggleTask: (id: number) => void;
+}
 
-  function handleDeleteTask(taskId: number): void {
-    setTasks(tasks.filter((tasks) => tasks.id !== taskId));
-  }
-
-  function handleTaskToggle(taskId: number): void {
-    setTasks(
-      tasks.map((task) =>
-        task.id === taskId ? { ...task, completed: !task.completed } : task
-      )
-    );
-  }
-
-  const checkedTasksCount = tasks.reduce((count, task) => {
-    if (task.completed) {
-      return count + 1;
-    } else {
-      return count;
-    }
-  }, 0);
+export function TaskContainer({ tasks, onDeleteTask, onToggleTask }: TaskContainerProps) {
+  const checkedTasksCount = tasks.filter(task => task.completed).length;
 
   return (
     <div className={styles.container}>
@@ -53,20 +33,18 @@ export function TaskContainer() {
           <div className={styles.noTasks}>
             <ClipboardText size={56} weight="light" />
             <div>
-              <p>
-                <strong>Você ainda não tem tarefas cadastradas</strong>
-              </p>
+              <p><strong>Você ainda não tem tarefas cadastradas</strong></p>
               <p>Crie tarefas e organize seus itens a fazer</p>
             </div>
           </div>
         ) : (
           <div className={styles.task}>
-            {tasks.map((task) => (
+            {tasks.map(task => (
               <TaskItem
                 key={task.id}
                 task={task}
-                onDelete={handleDeleteTask}
-                onToggleComplete={handleTaskToggle}
+                onDelete={() => onDeleteTask(task.id)}
+                onToggleComplete={() => onToggleTask(task.id)}
               />
             ))}
           </div>
