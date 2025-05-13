@@ -7,10 +7,17 @@
 
 </div>
 
+<div align="center">
+  <a href="https://tha-lias.github.io/todoList-react/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Ver%20esse%20projeto-blue?style=for-the-badge&logo=github&logoColor=white" alt="Ver esse projeto">
+  </a>
+</div>
+<br>
 
 Este projeto foi desenvolvido como parte do [**Desafio 01 da Rocketseat**](https://efficient-sloth-d85.notion.site/Desafio-01-Praticando-os-conceitos-do-ReactJS-91fd63dd1a5b4a2796152de293ec1074#5d65777c3d4942009e3fe381f08d3c54), com o objetivo de consolidar conhecimentos em **ReactJS**.  
 Toda a lógica, estrutura da aplicação e seus componentes foram implementadas por mim, a partir do [layout oficial no Figma](https://www.figma.com/file/0n0zDN7zbzhRbaEO74Xesx/ToDo-List/duplicate), prezando pela fidelidade visual, responsividade e boas práticas de desenvolvimento.
 
+<br>
 
 <div align="center">
 
